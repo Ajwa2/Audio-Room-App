@@ -1,14 +1,19 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
+import { AudioRoomDescription } from '../components/AudioRoomDescription';
+import { AudioRoomParticipants } from '../components/AudioRoomParticipants';
+import {AudioRoomControlsPanel} from '../components/AudioRoomControlsPanel';
 
 
 export const AudioRoomUI = ({ goToHomeScreen }) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Here we will add Audio Room UI</Text>
-      <Button title='Leave Audio Room' onPress={goToHomeScreen} />
-    </View>
-  );
+    return (
+        <View style={styles.container}>
+            <AudioRoomDescription />
+            <AudioRoomParticipants />
+            <AudioRoomControlsPanel />
+            <Button title='Leave Audio Room' onPress={goToHomeScreen} />
+        </View>
+    );
 };
 
 const styles = StyleSheet.create({
