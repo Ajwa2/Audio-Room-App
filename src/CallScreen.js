@@ -12,8 +12,6 @@ import { useEffect, useState } from 'react';
   
     const call = client?.call('audio_room', callId);
     useEffect(() => {
-      // After this step the call is live and you can start sending and receiving audio.
-      // const [call, setCall] = useState(null);
       if (call) {
         call
           .join({
